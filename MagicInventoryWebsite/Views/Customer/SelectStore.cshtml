@@ -1,0 +1,46 @@
+﻿@model IEnumerable<MagicInventoryWebsite.Models.Store>
+@inject UserManager<ApplicationUser> UserManager
+@inject SignInManager<ApplicationUser> SignInManager
+
+@{
+    ViewData["Title"] = "Index";
+}
+<section>
+  
+
+    <table class="table">
+        <thead>
+            <tr>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                   
+                </th>
+             
+            </tr>
+        </thead>
+        <tbody>
+            @*this code runs through the loop and displays stores,
+                this is set using the additional Store table column*@
+            @foreach (var item in Model)
+    {
+
+         
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    <a asp-action="Store" asp-route-storeName="@item.Name"> View Store Products</a>
+
+                </td>
+
+
+            </tr>
+        
+    }
+        </tbody>
+    </table>
+</section>

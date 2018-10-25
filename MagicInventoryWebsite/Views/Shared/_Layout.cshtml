@@ -1,0 +1,74 @@
+﻿@using MagicInventoryWebsite.Data
+@using Microsoft.AspNetCore.Authorization
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>@ViewData["Title"] - MagicInventoryWebsite</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="~/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="~/css/agency.css" rel="stylesheet">
+
+    
+
+</head>
+
+
+<body id="page-top">
+
+    @if (User.IsInRole(MagicConstants.OwnerRole))
+    {
+
+        @await Html.PartialAsync("_OwnerNavBar")
+    }
+    else if (User.IsInRole(MagicConstants.FranchiseHolderRole))
+    {
+        @await Html.PartialAsync("_FranchiseHolderNavBar")
+    }
+    else if (User.IsInRole(MagicConstants.CustomerRole))
+    {
+        @await Html.PartialAsync("_CustomerNavBar")
+    }
+    else
+    {
+        @await Html.PartialAsync("_UserNavBar")
+    }
+
+
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; 2018 - MagicInventoryWebsite</p>
+        </footer>
+    </div>
+
+    <environment include="Development">
+        <script src="~/vendor/jquery/jquery.min.js"></script>
+        <script src="~/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="~/vendor/jquery-easing/jquery.easing.min.js"></script>
+        <script src="~/js/jqBootstrapValidation.js"></script>
+        <script src="~/js/contact_me.js"></script>
+        <script src="~/js/agency.js"></script>
+    </environment>
+
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

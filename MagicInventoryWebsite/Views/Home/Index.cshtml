@@ -1,0 +1,30 @@
+﻿@using MagicInventoryWebsite.Data
+@{
+    ViewData["Title"] = "Home Page";
+}
+<!-- Header for welcome page from templated at https://startbootstrap.com/template-overviews/agency/-->
+<header class="masthead">
+    <div class="container">
+        <div class="intro-text">
+            <div class="intro-heading text-uppercase">Welcome To Magic Inventory</div>
+            
+            @if (User.IsInRole(MagicConstants.OwnerRole))
+            {
+
+                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" asp-area="" asp-controller="Owner" asp-action="Index">Enter</a>
+            }
+            else if (User.IsInRole(MagicConstants.FranchiseHolderRole))
+            {
+                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" asp-area="" asp-controller="FranchiseHolder" asp-action="Index">Enter</a>
+            }
+            else if (User.IsInRole(MagicConstants.CustomerRole))
+            {
+                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" asp-area="" asp-controller="Customer" asp-action="Index">Enter</a>
+            }
+            else
+            {
+                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" asp-area="" asp-controller="Customer" asp-action="Index">Enter</a>
+            }
+        </div>
+    </div>
+</header>

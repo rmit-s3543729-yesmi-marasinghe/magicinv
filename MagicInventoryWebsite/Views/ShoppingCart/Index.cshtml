@@ -1,0 +1,82 @@
+﻿@* code is based on https://docs.microsoft.com/en-us/aspnet/mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-8 *@
+@model MagicInventoryWebsite.Models.ShoppingCartViewModel
+@inject UserManager<ApplicationUser> UserManager
+
+@{
+    ViewBag.Title = "Shopping Cart";
+}
+
+<section>
+    <h4>
+        <em>@ViewBag.UserID</em><em>  Review</em> your cart:
+
+    </h4>
+
+    <table class="table">
+        <tr>
+            <th>
+                Store
+            </th>
+            <th>
+                Product
+            </th>
+            <th>
+                Price (each)
+            </th>
+
+            <th>
+                Quantity
+            </th>
+            <th>
+                SubTotal
+            </th>
+            <th></th>
+        </tr>
+        @foreach (var item in Model.CartItems)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => (item.Store.Name))
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Product.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Product.Price)
+
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Count)
+                </td>
+                <td>
+                    $@((item.Count * item.Product.Price))
+                </td>
+                <td>
+                    <a asp-action="UpdateCart" asp-route-recordID="@item.RecordID"> Remove from cart</a>
+                </td>
+            </tr>
+        }
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                <b>Total</b>
+            </td>
+
+            <td>
+                $@Model.CartTotal
+            </td>
+        </tr>
+    </table>
+  <form asp-action="Order">
+        <input type="hidden" asp-for="CartItems" />
+        <input type="hidden" asp-for="CartTotal" />
+
+        <input type="submit" value="Order" class="btn btn-default" /> |
+        <a asp-action="Index">Back to Cart</a>
+    </form>
+
+
+
+</section>

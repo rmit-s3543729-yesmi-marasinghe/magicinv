@@ -1,0 +1,59 @@
+﻿@model MagicInventoryWebsite.Models.Cart
+
+@{
+    ViewData["Title"] = "remove from cart";
+}
+<section>
+    <h2>Remove from cart</h2>
+
+    <h3>Are you sure you want to Remove this?</h3>
+    <div>
+        <table class="table">
+            <tr>
+                <th>
+                    Store
+                </th>
+                <th>
+                    Product
+                </th>
+                <th>
+                    Price (each)
+                </th>
+
+                <th>
+                    Quantity
+                </th>
+
+                <th></th>
+            </tr>
+           
+                <tr>
+                    <td>
+                        @Html.DisplayFor(model => model.Store.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.Product.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.Product.Price)
+
+                    </td>
+                    <td >
+                        @Html.DisplayFor(model => model.Count)
+                    </td>
+
+
+                </tr>
+            
+           
+        </table>
+        <form asp-action="UpdateCart">
+            <input type="hidden" asp-for="StoreID" />
+            <input type="hidden" asp-for="ProductID" />
+            <input type="hidden" asp-for="RecordID" />
+            <input type="hidden" asp-for="Count" value="0" />
+            <input type="submit" value="Remove Item" class="btn btn-default" asp-route-recordID="@ViewBag.RecordID" /> |
+            <a asp-action="Index">Back to Cart</a>
+        </form>
+    </div>
+</section>

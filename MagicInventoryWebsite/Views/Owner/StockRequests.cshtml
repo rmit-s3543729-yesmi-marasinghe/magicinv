@@ -1,0 +1,66 @@
+﻿@model IEnumerable<MagicInventoryWebsite.Models.StockRequestVM>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<section>
+<h2>Index</h2>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+              Stock Request ID
+            </th>
+            <th>
+               Store Name
+            </th>
+            <th>
+                Product
+            </th>
+            <th>
+                Quantity
+            </th>
+            <th>
+                Current Stock
+            </th>
+            <th>
+                StockAvailability
+            </th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(model => item.StockRequestVMID)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.StoreName)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.ProductName)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.Quantity)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.OwnerStockLevel)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.StockAvailability)
+            </td>
+            <td>
+                @if (item.StockAvailability)
+                {
+                    <a asp-action="Approve" asp-route-requestId="@item.StockRequestVMID">Approve</a>
+                }
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</section>

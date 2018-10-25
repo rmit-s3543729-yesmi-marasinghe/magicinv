@@ -1,0 +1,78 @@
+﻿@model IEnumerable<MagicInventoryWebsite.Models.OwnerInventory>
+
+
+<section>
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-sm-6 col-md-6 col-lg-4">
+                <form method="get">
+                    <p>
+                        Search by Product Name: <input name="productName" value="@ViewBag.ProductName" />
+
+                        <input type="submit" value="Filter" />
+                    </p>
+                </form>
+            </div>
+            <div class="col-sm-2 col-md-2 col-lg-2">
+                <h4>OR</h4>
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-6">
+                <form method="get">
+                    <p>
+                        Select Store:
+                        <select name="storeName">
+                            @foreach (var item in ViewBag.StoreName)
+                            {
+                                <option value="@item.Name">@item.Name</option>
+                            }
+
+                        </select>
+                        @*this hidden field loads the search made into the field for narrowing the search*@
+                        <input type="hidden" name="productName" value="@ViewBag.ProductName"  />
+                        <input type="submit" value="Select Store" asp-action="Store" />
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <table class="table">
+        <thead>
+            <tr>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.Product.Name)
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.Product.Price)
+                </th>
+
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+
+                    <td>
+                        @Html.DisplayFor(model => item.Product.Name)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(model => item.Product.Price)
+                    </td>
+                    @*   <td>
+                            <a asp-action="StoreCheck" asp-route-productID="@item.ProductID"> View Availability Instore</a>
+
+
+                        </td>*@
+                </tr>
+            }
+        </tbody>
+    </table>
+</section>

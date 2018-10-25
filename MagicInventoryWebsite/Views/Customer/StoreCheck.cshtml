@@ -1,0 +1,66 @@
+﻿@model MagicInventoryWebsite.Models.Cart
+@inject UserManager<ApplicationUser> UserManager
+@{
+    ViewData["Title"] = "Purchase";
+}
+
+<section>
+
+    <h4>Purchase</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Selected Store
+        </dt>
+        <dd>
+            @ViewBag.StoreName
+        </dd>
+        <dt>
+            Selected Product
+        </dt>
+        <dd>
+            @ViewBag.ProductName
+        </dd>
+        @*this line shows the Store's stock level as 'Available' or 'Out of stock'*@
+        <dt>
+            Availability
+        </dt>
+        <dd>
+            @ViewBag.ProductAvailableQuantity
+        </dd>
+
+    </dl>
+    @if (@ViewBag.ProductAvailableQuantity == "In Stock")
+    {
+        <div class="row">
+            <div class="col-md-4">
+                <form asp-action="StoreCheck">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                    <input type="hidden" asp-for="StoreID" readonly />
+                    <input type="hidden" asp-for="ProductID" readonly/>
+                    <input type="hidden" asp-for="CartID" value="@UserManager.GetUserName(User)" readonly />
+
+                    <div class="form-group">
+                        <label asp-for="Count" class="control-label">Quantity</label>
+
+                        @*this line of code ensures the quantity requested is available in the OwnerInventory
+                            thus preventing stock request that cannot be filled.*@
+                        <input asp-for="Count" min="1" max="@ViewBag.ProductAvailableQ" class="form-control" />
+                        <span asp-validation-for="Count" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Add to Cart" class="btn btn-default" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    }
+
+    <div>
+        <a asp-action="SelectStore">Back to Stores</a>
+    </div>
+</section>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

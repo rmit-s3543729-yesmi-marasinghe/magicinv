@@ -1,0 +1,61 @@
+﻿@model IEnumerable<MagicInventoryWebsite.Models.StoreInventory>
+@inject UserManager<ApplicationUser> UserManager
+@inject SignInManager<ApplicationUser> SignInManager
+
+@{
+    ViewData["Title"] = "Index";
+}
+<section>
+  
+    <h1>@ViewBag.StoreName</h1>
+
+    <form method="get">
+        <p>
+            Product Name: <input name="productName" value="@ViewBag.ProductName" />
+            <input type="hidden" name="storeName" value="@ViewBag.StoreName" />
+            <input type="submit" value="Filter" />
+        </p>
+    </form>
+    <table class="table">
+        <thead>
+            <tr>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.Product.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Product.Price)
+                </th>
+                <th>
+                   Select item
+                </th>
+
+
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @*this code runs through the loop and displays only the current store items,
+                this is set using the additional Store table column*@
+            @foreach (var item in Model)
+    {
+        if (SignInManager.IsSignedIn(User))
+        {
+         
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Product.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Product.Price)
+                </td>
+                <td>
+                    <a asp-action="StoreCheck"  asp-route-storeID="@ViewBag.StoreID" asp-route-productID="@item.ProductID"> View Availability Instore</a>
+                </td>
+
+            </tr>
+        }
+    }
+        </tbody>
+    </table>
+</section>

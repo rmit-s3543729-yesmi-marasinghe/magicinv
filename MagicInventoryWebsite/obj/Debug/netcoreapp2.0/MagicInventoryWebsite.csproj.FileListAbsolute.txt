@@ -1,0 +1,36 @@
+C:\Users\yesmi\Documents\WEB DEV\ASSIGNMENT\A2\MagicInventoryWebsite\MagicInventoryWebsite\bin\Debug\netcoreapp2.0\MagicInventoryWebsite.deps.json
+C:\Users\yesmi\Documents\WEB DEV\ASSIGNMENT\A2\MagicInventoryWebsite\MagicInventoryWebsite\bin\Debug\netcoreapp2.0\MagicInventoryWebsite.runtimeconfig.json
+C:\Users\yesmi\Documents\WEB DEV\ASSIGNMENT\A2\MagicInventoryWebsite\MagicInventoryWebsite\bin\Debug\netcoreapp2.0\MagicInventoryWebsite.runtimeconfig.dev.json
+C:\Users\yesmi\Documents\WEB DEV\ASSIGNMENT\A2\MagicInventoryWebsite\MagicInventoryWebsite\bin\Debug\netcoreapp2.0\MagicInventoryWebsite.dll
+C:\Users\yesmi\Documents\WEB DEV\ASSIGNMENT\A2\MagicInventoryWebsite\MagicInventoryWebsite\bin\Debug\netcoreapp2.0\MagicInventoryWebsite.pdb
+C:\Users\yesmi\Documents\WEB DEV\ASSIGNMENT\A2\MagicInventoryWebsite\MagicInventoryWebsite\obj\Debug\netcoreapp2.0\MagicInventoryWebsite.csproj.CoreCompileInputs.cache
+C:\Users\yesmi\Documents\WEB DEV\ASSIGNMENT\A2\MagicInventoryWebsite\MagicInventoryWebsite\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\yesmi\Documents\WEB DEV\ASSIGNMENT\A2\MagicInventoryWebsite\MagicInventoryWebsite\obj\Debug\netcoreapp2.0\MagicInventoryWebsite.AssemblyInfoInputs.cache
+C:\Users\yesmi\Documents\WEB DEV\ASSIGNMENT\A2\MagicInventoryWebsite\MagicInventoryWebsite\obj\Debug\netcoreapp2.0\MagicInventoryWebsite.AssemblyInfo.cs
+C:\Users\yesmi\Documents\WEB DEV\ASSIGNMENT\A2\MagicInventoryWebsite\MagicInventoryWebsite\obj\Debug\netcoreapp2.0\MagicInventoryWebsite.dll
+C:\Users\yesmi\Documents\WEB DEV\ASSIGNMENT\A2\MagicInventoryWebsite\MagicInventoryWebsite\obj\Debug\netcoreapp2.0\MagicInventoryWebsite.pdb
+C:\Users\yesmi\Documents\WEB DEV\ASSIGNMENT\A2\MagicInventoryWebsite\MagicInventoryWebsite\obj\Debug\netcoreapp2.0\MagicInventoryWebsite.csprojResolveAssemblyReference.cache
+C:\Users\yesmi\Desktop\A2\MagicInventoryWebsite\MagicInventoryWebsite\bin\Debug\netcoreapp2.0\MagicInventoryWebsite.deps.json
+C:\Users\yesmi\Desktop\A2\MagicInventoryWebsite\MagicInventoryWebsite\bin\Debug\netcoreapp2.0\MagicInventoryWebsite.runtimeconfig.json
+C:\Users\yesmi\Desktop\A2\MagicInventoryWebsite\MagicInventoryWebsite\bin\Debug\netcoreapp2.0\MagicInventoryWebsite.runtimeconfig.dev.json
+C:\Users\yesmi\Desktop\A2\MagicInventoryWebsite\MagicInventoryWebsite\bin\Debug\netcoreapp2.0\MagicInventoryWebsite.dll
+C:\Users\yesmi\Desktop\A2\MagicInventoryWebsite\MagicInventoryWebsite\bin\Debug\netcoreapp2.0\MagicInventoryWebsite.pdb
+C:\Users\yesmi\Desktop\A2\MagicInventoryWebsite\MagicInventoryWebsite\obj\Debug\netcoreapp2.0\MagicInventoryWebsite.csprojResolveAssemblyReference.cache
+C:\Users\yesmi\Desktop\A2\MagicInventoryWebsite\MagicInventoryWebsite\obj\Debug\netcoreapp2.0\MagicInventoryWebsite.csproj.CoreCompileInputs.cache
+C:\Users\yesmi\Desktop\A2\MagicInventoryWebsite\MagicInventoryWebsite\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\yesmi\Desktop\A2\MagicInventoryWebsite\MagicInventoryWebsite\obj\Debug\netcoreapp2.0\MagicInventoryWebsite.AssemblyInfoInputs.cache
+C:\Users\yesmi\Desktop\A2\MagicInventoryWebsite\MagicInventoryWebsite\obj\Debug\netcoreapp2.0\MagicInventoryWebsite.AssemblyInfo.cs
+C:\Users\yesmi\Desktop\A2\MagicInventoryWebsite\MagicInventoryWebsite\obj\Debug\netcoreapp2.0\MagicInventoryWebsite.dll
+C:\Users\yesmi\Desktop\A2\MagicInventoryWebsite\MagicInventoryWebsite\obj\Debug\netcoreapp2.0\MagicInventoryWebsite.pdb
+C:\Users\yesmi\Documents\PAST\WEB DEV\A2\MagicInventoryWebsite\MagicInventoryWebsite\bin\Debug\netcoreapp2.0\MagicInventoryWebsite.deps.json
+C:\Users\yesmi\Documents\PAST\WEB DEV\A2\MagicInventoryWebsite\MagicInventoryWebsite\bin\Debug\netcoreapp2.0\MagicInventoryWebsite.runtimeconfig.json
+C:\Users\yesmi\Documents\PAST\WEB DEV\A2\MagicInventoryWebsite\MagicInventoryWebsite\bin\Debug\netcoreapp2.0\MagicInventoryWebsite.runtimeconfig.dev.json
+C:\Users\yesmi\Documents\PAST\WEB DEV\A2\MagicInventoryWebsite\MagicInventoryWebsite\bin\Debug\netcoreapp2.0\MagicInventoryWebsite.dll
+C:\Users\yesmi\Documents\PAST\WEB DEV\A2\MagicInventoryWebsite\MagicInventoryWebsite\bin\Debug\netcoreapp2.0\MagicInventoryWebsite.pdb
+C:\Users\yesmi\Documents\PAST\WEB DEV\A2\MagicInventoryWebsite\MagicInventoryWebsite\obj\Debug\netcoreapp2.0\MagicInventoryWebsite.csprojAssemblyReference.cache
+C:\Users\yesmi\Documents\PAST\WEB DEV\A2\MagicInventoryWebsite\MagicInventoryWebsite\obj\Debug\netcoreapp2.0\MagicInventoryWebsite.csproj.CoreCompileInputs.cache
+C:\Users\yesmi\Documents\PAST\WEB DEV\A2\MagicInventoryWebsite\MagicInventoryWebsite\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\yesmi\Documents\PAST\WEB DEV\A2\MagicInventoryWebsite\MagicInventoryWebsite\obj\Debug\netcoreapp2.0\MagicInventoryWebsite.AssemblyInfoInputs.cache
+C:\Users\yesmi\Documents\PAST\WEB DEV\A2\MagicInventoryWebsite\MagicInventoryWebsite\obj\Debug\netcoreapp2.0\MagicInventoryWebsite.AssemblyInfo.cs
+C:\Users\yesmi\Documents\PAST\WEB DEV\A2\MagicInventoryWebsite\MagicInventoryWebsite\obj\Debug\netcoreapp2.0\MagicInventoryWebsite.dll
+C:\Users\yesmi\Documents\PAST\WEB DEV\A2\MagicInventoryWebsite\MagicInventoryWebsite\obj\Debug\netcoreapp2.0\MagicInventoryWebsite.pdb

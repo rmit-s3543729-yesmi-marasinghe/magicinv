@@ -1,0 +1,68 @@
+﻿@model MagicInventoryWebsite.Models.StockRequestVM
+
+@{
+    ViewData["Title"] = "Approve";
+}
+<section>
+    <h2>Approve Stock Request</h2>
+
+    <h3>Are you sure you want to Approve this?</h3>
+    <div>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>
+                    Stock Request ID
+                </th>
+                <th>
+                    Store Name
+                </th>
+                <th>
+                    Product
+                </th>
+                <th>
+                    Quantity
+                </th>
+                <th>
+                    Current Stock
+                </th>
+                <th>
+                    StockAvailability
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+           
+                <tr>
+                    <td>
+                        @Html.DisplayFor(model => model.StockRequestVMID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.StoreName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.ProductName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.Quantity)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.OwnerStockLevel)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.StockAvailability)
+                    </td>
+
+                </tr>
+       
+            </tbody>
+        </table>
+        <form asp-action="Approve">
+            <input type="hidden" asp-for="StoreID" />
+            <input type="hidden" asp-for="ProductID" />
+            <input type="hidden" asp-for="StockRequestVMID" />
+            <input type="submit" value="Approve" class="btn btn-default" asp-route-requestId="@ViewBag.RequestID" /> |
+            <a asp-action="StockRequests">Back to List</a>
+        </form>
+    </div>
+</section>
